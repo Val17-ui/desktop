@@ -1,0 +1,29 @@
+{
+  "name": "easycertif-desktop",
+  "version": "1.0.0",
+  "description": "Application de bureau EasyCertif",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "npm run build && electron .",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint . --ext .ts",
+    "package-win": "npm run build && electron-packager . EasyCertif --platform=win32 --arch=x64 --overwrite --out=release-build --icon=public/icon.ico"
+  },
+  "keywords": [
+    "Electron",
+    "EasyCertif"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/sqlite3": "^3.1.11",
+    "electron": "^28.0.0",
+    "electron-packager": "^17.1.2",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  }
+}
